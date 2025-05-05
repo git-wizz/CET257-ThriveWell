@@ -1,0 +1,137 @@
+/* tamagochi-game-styles.css */
+
+/* General Body Style */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f8fb;
+    margin: 0;
+}
+
+/* Main Game Container */
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Header */
+h1 {
+    color: #0072ce;
+    margin-bottom: 1.5rem;
+}
+
+/* Pet Status */
+#petStatus {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Timer Display */
+#timer {
+    font-size: 1.5rem;
+    color: #0072ce;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Progress Bars */
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background-color: #eee;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    border-radius: 12px;
+    transition: width 0.3s ease;
+}
+
+#healthBar {
+    background-color: #ff6f61; /* Red for health */
+}
+
+#happinessBar {
+    background-color: #66b3ff; /* Blue for happiness */
+}
+
+#dirtinessBar {
+    background-color: #ffcc00; /* Yellow for dirtiness */
+}
+
+/* Buttons */
+button {
+    padding: 0.5rem 1.5rem;
+    background-color: #0072ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Pet Image */
+#petImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Action Buttons for Feeding, Cleaning, Playing */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.action-buttons button {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    background-color: #66b3ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action-buttons button:hover {
+    transform: scale(1.05);
+}
+
+.action-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2rem;
+}
