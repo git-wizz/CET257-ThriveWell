@@ -1,0 +1,73 @@
+/* games-styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0072ce;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#gameSearch {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.game-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-item a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #0072ce;
+    font-weight: bold;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+.game-item a:hover {
+    color: #005bb5;
+}
