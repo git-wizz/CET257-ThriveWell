@@ -1,0 +1,152 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefcf8;
+  color: #212121;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #005eb8; /* NHS Blue */
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+textarea,
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #ffdd00; /* NHS Yellow Focus Ring */
+}
+
+button {
+  background-color: #005eb8;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #003f7d;
+}
+
+#chart {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 16px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.emoji-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0 20px 0;
+  flex-wrap: nowrap;
+}
+
+.emoji-buttons button {
+  font-size: 1.5rem;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+  padding: 0;
+}
+
+.emoji-buttons button:hover,
+.emoji-buttons button.selected {
+  transform: scale(1.1);
+  border-color: #005eb8;
+  background-color: #e6f2ff;
+}
+
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .emoji-buttons {
+    justify-content: center;
+  }
+
+  .emoji-buttons button {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+
+  .emoji-buttons button {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
