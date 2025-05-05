@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mood Journal</title>
   <link rel="stylesheet" href="mood-journal-styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For graph -->
 </head>
+
 <body>
   <header>
     <h1>Mood Journal</h1>
-    <nav>
-      <a href="homepage.html">Back to Home</a>
-    </nav>
+    <a href="homepage.html" class="back-link">← Back to Home</a>
   </header>
 
   <main>
     <h2>Which of these best describes your current mood?</h2>
     <form id="moodForm">
-      
+
       <!-- Emoji Buttons Row -->
       <label>How are you feeling today?</label>
       <div class="emoji-buttons">
@@ -29,25 +29,92 @@
         <button type="button" data-mood="excited">🤩</button>
       </div>
       <input type="hidden" id="mood" name="mood" required>
-  
+
       <!-- Open-ended Questions -->
       <label for="q1">What's on your mind?</label>
-      <textarea id="q1" name="q1" rows="3" placeholder="Describe how you feel with as much detail as possible..." required></textarea>
-  
+      <textarea id="q1" name="q1" rows="3" placeholder="Describe how you feel with as much detail as possible..."
+        required></textarea>
+
       <label for="q2">What triggered this feeling?</label>
-      <textarea id="q2" name="q2" rows="3" placeholder="What made you feel this way? Did anything happen?" required></textarea>
-  
+      <textarea id="q2" name="q2" rows="3" placeholder="What made you feel this way? Did anything happen?"
+        required></textarea>
+
       <label for="q3">What can you do about this feeling?</label>
-      <textarea id="q3" name="q3" rows="3" placeholder="Is there anything you can do to make you feel better?" required></textarea>
-  
+      <textarea id="q3" name="q3" rows="3" placeholder="Is there anything you can do to make you feel better?"
+        required></textarea>
+
       <label for="q4">Anything else? (Journal)</label>
       <textarea id="q4" name="q4" rows="4" placeholder="Pour your heart out..." required></textarea>
-  
+
       <button type="submit">Submit</button>
     </form>
-  
+
+    <!-- Confirmation message (initially hidden) -->
+    <div id="confirmationMessage" class="modal hidden">
+      <div class="modal-content">
+        <p>Your mood has been recorded!</p>
+        <button id="goToWellness">Go to Wellness Page</button>
+        <button id="playGame">Play a Game</button>
+        <button id="goHome">Back to Home</button>
+        <button id="moodJournal">Record Mood again</button>
+      </div>
+    </div>
+
     <div id="chart">
       <canvas id="moodChart"></canvas>
     </div>
   </main>
-  
+
+  <script>
+    // Get references to elements
+    const moodForm = document.getElementById('moodForm');
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    const goToWellnessBtn = document.getElementById('goToWellness');
+    const playGameBtn = document.getElementById('playGame');
+    const goHomeBtn = document.getElementById('goHome');
+    const moodJournalBtn = document.getElementById('moodJournal');
+    const moodInput = document.getElementById('mood');
+
+    // Handle emoji button clicks to set mood
+    const emojiButtons = document.querySelectorAll('.emoji-buttons button');
+    emojiButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const selectedMood = this.dataset.mood;
+        moodInput.value = selectedMood;
+      });
+    });
+
+    // Handle mood form submission
+    moodForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Show the confirmation message (modal style)
+      confirmationMessage.classList.remove('hidden');
+      moodForm.classList.add('hidden'); // Hide the form
+
+      //TO-DO: Optionally, you could save the mood data here (e.g., save to database or local storage)
+    });
+
+    // Navigate to Wellness Page
+    goToWellnessBtn.addEventListener('click', function() {
+      window.location.href = 'wellness.html'; 
+    });
+
+    // Navigate to Games Page
+    playGameBtn.addEventListener('click', function() {
+      window.location.href = 'games.html'; 
+    });
+
+    // Navigate to Mood Journal Page
+    moodJournalBtn.addEventListener('click', function() {
+      window.location.href = 'mood-journal.html'; 
+    });
+
+    // Go back to the Home Page
+    goHomeBtn.addEventListener('click', function() {
+      window.location.href = 'homepage.html';
+    });
+  </script>
+</body>
+
+</html>
