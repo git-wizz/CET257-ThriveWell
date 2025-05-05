@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wellness</title>
+  <link rel="stylesheet" href="wellness.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Wellness</h1>
+    <a href="homepage.html" class="back-link">← Back to Home</a>
+  </header>
+
+  <main>
+    <section id="moodTrend">
+      <h2>Mood Trend</h2>
+      <canvas id="moodChart" width="400" height="200"></canvas>
+    </section>
+
+    <section id="reflection">
+      <h2>Self-Reflection</h2>
+      <button id="openPopup">Reflective Techniques</button>
+      <div id="popup" class="hidden">
+        <div class="popup-content">
+          <span id="closePopup">&times;</span>
+          <h3>Reflective Techniques</h3>
+          <ul>
+            <li>Journaling your thoughts</li>
+            <li>Deep breathing exercises</li>
+            <li>Practicing gratitude</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gamesRedirect">
+      <h2>Take a Mental Break</h2>
+      <button onclick="location.href='games.html'">Go to Games</button>
+    </section>
+  </main>
+
+  <script src="wellness.js"></script>
+</body>
+</html>
