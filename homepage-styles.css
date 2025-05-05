@@ -1,0 +1,155 @@
+/* General Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F4F5;
+    color: #212B32;
+}
+
+/* Header */
+header {
+    background-color: #005EB8;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Greeting & Emoji Mood Section */
+.user-greeting {
+    text-align: center;
+    margin: 2rem 1rem 1rem;
+}
+
+.emoji-section {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.emoji-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.emoji-buttons button {
+    font-size: 2rem;
+    background: white;
+    border: 2px solid #005EB8;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.emoji-buttons button:hover {
+    background-color: #0072CE;
+    color: white;
+}
+
+/* Feature Section */
+.feature-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background-color: white;
+    border: 2px solid #005EB8;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    background-color: #e6f0fa;
+}
+
+/* My Wrap Button */
+.wrap-button {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.wrap-button a {
+    background-color: #005EB8;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wrap-button a:hover {
+    background-color: #003f75;
+}
+
+/* Footer */
+footer {
+    background-color: #005EB8;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+}
+
+footer nav {
+    margin-top: 0.5rem;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+    .emoji-buttons button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .feature-section {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
