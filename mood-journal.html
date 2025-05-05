@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood Journal</title>
+  <link rel="stylesheet" href="mood-journal-styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For graph -->
+</head>
+<body>
+  <header>
+    <h1>Mood Journal</h1>
+    <nav>
+      <a href="homepage.html">Back to Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Which of these best describes your current mood?</h2>
+    <form id="moodForm">
+      
+      <!-- Emoji Buttons Row -->
+      <label>How are you feeling today?</label>
+      <div class="emoji-buttons">
+        <button type="button" data-mood="happy">😊</button>
+        <button type="button" data-mood="sad">😢</button>
+        <button type="button" data-mood="angry">😠</button>
+        <button type="button" data-mood="anxious">😰</button>
+        <button type="button" data-mood="excited">🤩</button>
+      </div>
+      <input type="hidden" id="mood" name="mood" required>
+  
+      <!-- Open-ended Questions -->
+      <label for="q1">What's on your mind?</label>
+      <textarea id="q1" name="q1" rows="3" placeholder="Describe how you feel with as much detail as possible..." required></textarea>
+  
+      <label for="q2">What triggered this feeling?</label>
+      <textarea id="q2" name="q2" rows="3" placeholder="What made you feel this way? Did anything happen?" required></textarea>
+  
+      <label for="q3">What can you do about this feeling?</label>
+      <textarea id="q3" name="q3" rows="3" placeholder="Is there anything you can do to make you feel better?" required></textarea>
+  
+      <label for="q4">Anything else? (Journal)</label>
+      <textarea id="q4" name="q4" rows="4" placeholder="Pour your heart out..." required></textarea>
+  
+      <button type="submit">Submit</button>
+    </form>
+  
+    <div id="chart">
+      <canvas id="moodChart"></canvas>
+    </div>
+  </main>
+  
