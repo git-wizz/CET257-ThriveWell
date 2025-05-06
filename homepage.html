@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>ThriveWell</title>
   <link rel="stylesheet" href="homepage-styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/a11y-tools.js@1.1.0/dist/a11y-tools.min.js"></script>
 </head>
 <body>
 
@@ -16,15 +17,15 @@
         <li><a href="homepage.html">Home</a></li>
         <li><a href="mood-journal.html">Mood Journal</a></li>
         <li><a href="info-hub.html">Info Hub</a></li>
-        <li><a href="contact.html">Contact</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="" class="accessibilityTools">Accessibility Tools</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="homepage">
     <section class="user-greeting">
-      <h2>Hello, [Username]</h2>
+      <h2>Hello, <span id="username">[Username]</span></h2>
       <p>How are you feeling today?</p>
       <div class="emoji-buttons">
         <button onclick="location.href='mood-journal.html'">😊</button>

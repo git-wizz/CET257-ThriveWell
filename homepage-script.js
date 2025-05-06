@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         const mood = btn.textContent;
         console.log(`Mood selected: ${mood}`);
-        // You could also save this to localStorage or send to server
+        //Would be saved to localStorage or sent to server
       });
     });
   
-    // 3. Feature Boxes: Add hover or active effects if needed
+    // 3. Added hover and active effects
     const featureBoxes = document.querySelectorAll(".feature-box");
     featureBoxes.forEach((box) => {
       box.addEventListener("mouseenter", () => {
