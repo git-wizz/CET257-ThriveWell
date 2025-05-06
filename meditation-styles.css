@@ -1,0 +1,116 @@
+/*Appropriate styling for the meditation page */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(to top, #d0eafc, #ffffff);
+    position: relative;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    margin: 4rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  h1 {
+    color: #0072ce;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  audio {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  
+  .guide {
+    text-align: left;
+    margin-top: 1.5rem;
+  }
+  
+  .guide h2 {
+    color: #0072ce;
+  }
+  
+  .guide ul {
+    padding-left: 1rem;
+  }
+  
+  .back-button {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #0072ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #005fa3;
+  }
+  
+  select {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* CSS cloud blobs */
+  .cloud {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(40px);
+    animation: drift 60s linear infinite;
+    z-index: 1;
+  }
+  
+  .cloud:nth-child(1) {
+    width: 300px;
+    height: 150px;
+    top: 10%;
+    left: -200px;
+    animation-delay: 0s;
+  }
+  
+  .cloud:nth-child(2) {
+    width: 200px;
+    height: 120px;
+    top: 40%;
+    left: -250px;
+    animation-delay: 20s;
+  }
+  
+  .cloud:nth-child(3) {
+    width: 250px;
+    height: 140px;
+    top: 70%;
+    left: -300px;
+    animation-delay: 40s;
+  }
+  
+  @keyframes drift {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(120vw);
+    }
+  }  
