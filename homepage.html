@@ -1,64 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>ThriveWell</title>
-  <link rel="stylesheet" href="homepage-styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/a11y-tools.js@1.1.0/dist/a11y-tools.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ThriveWell</title>
+    <link rel="stylesheet" href="homepage-styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/a11y-tools.js@1.1.0/dist/a11y-tools.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>ThriveWell</h1>
+      <nav>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="mood-journal/mood-journal.html">Mood Journal</a></li>
+          <li><a href="info-hub.html">Info Hub</a></li>
+          <li><a href="settings/settings.html">Settings</a></li>
+          <li><a href="" class="accessibilityTools">Accessibility Tools</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <h1>ThriveWell</h1>
-    <nav>
-      <ul>
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="mood-journal.html">Mood Journal</a></li>
-        <li><a href="info-hub.html">Info Hub</a></li>
-        <li><a href="settings.html">Settings</a></li>
-        <li><a href="" class="accessibilityTools">Accessibility Tools</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="homepage">
+      <section class="user-greeting">
+        <h2>Hello, <span id="username">[Username]</span></h2>
+        <p>How are you feeling today?</p>
+        <div class="emoji-buttons">
+          <button onclick="location.href='../mood-journal/mood-journal.html'">
+            😊
+          </button>
+          <button onclick="location.href='../mood-journal/mood-journal.html'">
+            😢
+          </button>
+          <button onclick="location.href='../mood-journal/mood-journal.html'">
+            😠
+          </button>
+          <button onclick="location.href='../mood-journal/mood-journal.html'">
+            😰
+          </button>
+          <button onclick="location.href='../mood-journal/mood-journal.html'">
+            🤩
+          </button>
+        </div>
+      </section>
 
-  <main class="homepage">
-    <section class="user-greeting">
-      <h2>Hello, <span id="username">[Username]</span></h2>
-      <p>How are you feeling today?</p>
-      <div class="emoji-buttons">
-        <button onclick="location.href='mood-journal.html'">😊</button>
-        <button onclick="location.href='mood-journal.html'">😢</button>
-        <button onclick="location.href='mood-journal.html'">😠</button>
-        <button onclick="location.href='mood-journal.html'">😰</button>
-        <button onclick="location.href='mood-journal.html'">🤩</button>
-      </div>
-    </section>
+      <section class="feature-grid">
+        <div
+          class="feature-box"
+          onclick="location.href='wellness/wellness.html'"
+        >
+          Wellness
+        </div>
+        <div class="feature-box" onclick="location.href='info-hub.html'">
+          Info Hub
+        </div>
+        <div
+          class="feature-box"
+          onclick="location.href='mood-journal/mood-journal.html'"
+        >
+          Mood Journal
+        </div>
+        <div class="feature-box" onclick="location.href='games/games.html'">
+          Games
+        </div>
+        <div class="feature-box" onclick="location.href='community.html'">
+          Community & Support
+        </div>
+        <div class="feature-box" onclick="location.href='crisis.html'">
+          Crisis Support
+        </div>
+      </section>
 
-    <section class="feature-grid">
-      <div class="feature-box" onclick="location.href='wellness.html'">Wellness</div>
-      <div class="feature-box" onclick="location.href='info-hub.html'">Info Hub</div>
-      <div class="feature-box" onclick="location.href='mood-journal.html'">Mood Journal</div>
-      <div class="feature-box" onclick="location.href='games.html'">Games</div>
-      <div class="feature-box" onclick="location.href='community.html'">Community & Support</div>
-      <div class="feature-box" onclick="location.href='crisis.html'">Crisis Support</div>
-    </section>
+      <section class="wrap-section">
+        <button class="wrap-button" onclick="location.href='mywrap.html'">
+          My Wrap
+        </button>
+      </section>
+    </main>
 
-    <section class="wrap-section">
-      <button class="wrap-button" onclick="location.href='mywrap.html'">My Wrap</button>
-    </section>
-  </main>
+    <footer>
+      <nav class="footer-nav">
+        <a href="homepage.html">Home</a>
+        <a href="info-hub.html">Info Hub</a>
+        <a href="settings/settings.html">Profile</a>
+      </nav>
+      <p>&copy; 2025 ThriveWell. All rights reserved.</p>
+    </footer>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="info-hub.html">Info Hub</a>
-      <a href="settings.html">Profile</a>
-    </nav>
-    <p>&copy; 2025 ThriveWell. All rights reserved.</p>
-  </footer>
-
-  <script src="homepage-script.js"></script>
-</body>
+    <script src="homepage-script.js"></script>
+  </body>
 </html>

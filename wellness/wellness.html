@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness</title>
+    <link rel="stylesheet" href="wellness.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Wellness</h1>
+      <a href="../homepage.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <main>
+      <section id="moodTrend">
+        <h2>Mood Trends</h2>
+        <p>
+          Your wellness matters. Here's a look at how your mood has evolved over
+          time. Understanding your emotional patterns can help you build
+          resilience and maintain balance.
+        </p>
+
+        <label for="timeRange">View trends from:</label>
+        <select id="timeRange">
+          <option value="week">This Week</option>
+          <option value="month">This Month</option>
+          <option value="all">All Time</option>
+        </select>
+
+        <canvas id="moodChart" width="400" height="200"></canvas>
+      </section>
+
+      <section id="reflection">
+        <h2>Self-Reflection</h2>
+        <p>
+          Explore a range of reflective techniques to support your wellness.
+        </p>
+        <button id="openPopup">Reflective Techniques</button>
+        <div id="popup" class="hidden">
+          <div class="popup-content">
+            <span id="closePopup">&times;</span>
+            <h3>Reflective Techniques</h3>
+            <ul>
+              <li>Deep breathing exercises</li>
+              <li>Write in a journal for 5 minutes.</li>
+              <li>Try the 5-4-3-2-1 grounding technique.</li>
+              <li>Reflect on three things you're grateful for.</li>
+              <li>Practice mindful breathing for 2 minutes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="meditationRedirect">
+        <h2>Try Meditation</h2>
+        <p>Explore guided meditation to help you relax.</p>
+        <button onclick="location.href='meditation/meditation.html'">
+          Let us Meditate
+        </button>
+      </section>
+
+      <section id="gamesRedirect">
+        <h2>Take a Mental Break</h2>
+        <p>Explore games that support your mental well-being.</p>
+        <button onclick="location.href='../games/games.html'">
+          Go to Games
+        </button>
+      </section>
+    </main>
+
+    <script src="wellness.js"></script>
+  </body>
+</html>

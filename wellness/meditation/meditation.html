@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meditation</title>
+    <link rel="stylesheet" href="meditation-styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Guided Meditation</h1>
+      <p>Take a moment to breathe and center yourself.</p>
+
+      <!-- Track Selector -->
+      <label for="trackSelector">Choose a track:</label>
+      <select id="trackSelector" onchange="changeTrack()">
+        <option value="audio/4_Elements_Exercises.mp3">
+          Elements Exercises
+        </option>
+        <option value="audio/Body_Scan_Short.mp3">Body Scan Tracks</option>
+        <option value="audio/Guided_Meditation_2.mp3">Calm Waves</option>
+        <option value="audio/Guided_Meditation_1.mp3">Guided Meditation</option>
+        <option value="audio/Sitting_Meditation.mp3">Sitting Meditation</option>
+      </select>
+
+      <!-- Audio Player -->
+      <audio id="meditationAudio" controls loop>
+        <source src="audio/4_Elements_Exercises.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Meditation Guide -->
+      <div class="guide">
+        <h2>How to Meditate</h2>
+        <ul>
+          <li>Find a comfortable seated position.</li>
+          <li>Close your eyes and relax your shoulders.</li>
+          <li>Inhale slowly through your nose for 4 seconds.</li>
+          <li>Hold your breath for 4 seconds.</li>
+          <li>Exhale gently through your mouth for 6 seconds.</li>
+          <li>Repeat this cycle for a few minutes.</li>
+        </ul>
+      </div>
+
+      <button onclick="location.href='../wellness.html'" class="back-button">
+        ← Back to Wellness
+      </button>
+    </div>
+
+    <script>
+      function changeTrack() {
+        const selector = document.getElementById("trackSelector");
+        const audio = document.getElementById("meditationAudio");
+        audio.src = selector.value;
+        audio.play();
+      }
+    </script>
+  </body>
+
+  <!-- Animated clouds -->
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+</html>

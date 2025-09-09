@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamagotchi Game</title>
+    <link rel="stylesheet" href="tamagochi-game-styles.css" />
+  </head>
+
+  <body>
+    <div class="game-container">
+      <h1>Tamagotchi Game</h1>
+      <a href="../games.html" class="back-link">← Back to Games</a>
+    </div>
+
+    <section id="petDisplaySection">
+      <div id="petDisplay">
+        <img src="pet.jpg" alt="Your Tamagotchi Pet" id="petImage" />
+      </div>
+      <p id="petStatus">Tamagotchi is happy!</p>
+    </section>
+
+    <section id="gameControls">
+      <div class="actionButtons">
+        <button id="feedButton">Feed</button>
+        <button id="playButton">Play</button>
+        <button id="cleanButton">Clean</button>
+      </div>
+
+      <div class="statusBars">
+        <label for="healthBar">Health (Hunger):</label>
+        <progress id="healthBar" value="100" max="100"></progress>
+
+        <label for="happinessBar">Happiness:</label>
+        <progress id="happinessBar" value="100" max="100"></progress>
+
+        <label for="dirtinessBar">Dirtiness:</label>
+        <progress id="dirtinessBar" value="0" max="100"></progress>
+      </div>
+    </section>
+
+    <section id="gameInfo">
+      <p id="timer">Time: 00:00</p>
+      <p id="message">Tamagotchi needs your attention!</p>
+    </section>
+
+    <script src="tamagochi-game.js"></script>
+  </body>
+</html>
